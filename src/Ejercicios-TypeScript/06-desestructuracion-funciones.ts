@@ -2,7 +2,7 @@
     ===== Código de TypeScript =====
 */
 
-interface Product {
+export interface Product {
   description: string;
   price: number;
 }
@@ -17,7 +17,7 @@ const tablet: Product = {
   price: 350,
 };
 
-function getVAT(products: Product[]): [number, number] {
+export function getVAT(products: Product[]): [number, number] {
   let total = 0;
   products.forEach(({ price }) => {
     total += price;
